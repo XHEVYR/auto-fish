@@ -19,37 +19,64 @@ Bot otomatisasi memancing untuk game Roblox (seperti *Steal an Egg* atau game me
 
 ---
 
-## 🚀 Panduan Instalasi & Menjalankan
+## 🚀 Panduan Setup Awal (Untuk Pemula / Belum Punya Python)
 
-### 1. Clone atau Unduh Repositori
-```bash
-git clone https://github.com/XHEVYR/auto-fish.git
-cd roblox-auto-fish
-```
+Jika Anda belum pernah menggunakan Python atau Git sebelumnya, ikuti langkah-langkah berikut dari awal:
 
-### 2. (Opsional tapi Disarankan) Buat Virtual Environment
-```bash
-python -m venv venv
+### Langkah 1: Install Python
+1. Buka situs resmi Python: [python.org/downloads](https://www.python.org/downloads/)
+2. Klik tombol kuning **Download Python 3.x.x**.
+3. Jalankan file installer yang sudah diunduh.
+4. **PENTING:** Di layar pertama installer, **WAJIB centang** kotak **"Add python.exe to PATH"** di bagian bawah sebelum menekan tombol **Install Now**.
+   *(Jika lupa mencentang ini, perintah `python` dan `pip` tidak akan dikenali oleh Windows).*
+5. Tunggu hingga selesai, lalu klik **Close**.
 
-# Aktivasi di Windows (Command Prompt):
-venv\Scripts\activate
+### Langkah 2: Download Script Ini
+Anda tidak perlu menginstall Git. Cukup unduh langsung dari GitHub:
+1. Di halaman GitHub ini, klik tombol hijau **`<> Code`** di bagian kanan atas.
+2. Pilih **Download ZIP**.
+3. Buka file `.zip` yang baru diunduh, lalu **Extract / Ekstrak** foldernya ke tempat yang mudah ditemukan (misalnya di `Desktop` atau `Documents`).
 
-# Atau di PowerShell:
-venv\Scripts\Activate.ps1
-```
+### Langkah 3: Buka Terminal (CMD) di Dalam Folder
+1. Buka folder hasil ekstrak tadi (yang di dalamnya ada file `auto_fish.py`).
+2. Klik pada **bilah alamat (Address Bar)** di bagian atas jendela File Explorer (tempat tulisan lokasi folder, misal `C:\Users\...\auto-fish-main`).
+3. Ketik **`cmd`** lalu tekan **Enter**. Jendela hitam Command Prompt akan terbuka langsung di folder tersebut.
 
-### 3. Install Dependensi
-Jalankan perintah berikut untuk menginstal semua library yang dibutuhkan:
+*(Tips: Jika nantinya bot tidak merespons saat jendela Roblox aktif, buka **Command Prompt** lewat Start Menu dengan klik kanan -> **Run as administrator**, lalu masuk ke folder menggunakan perintah `cd C:\lokasi\folder\anda`).*
+
+### Langkah 4: Install Library yang Dibutuhkan
+Di dalam jendela CMD tadi, ketik perintah berikut lalu tekan **Enter**:
 ```bash
 pip install -r requirements.txt
 ```
+Tunggu beberapa saat sampai proses download & instalasi selesai. Langkah ini cukup dilakukan **1 kali saja**.
 
-### 4. Menjalankan Script
-Jalankan bot dengan perintah:
+### Langkah 5: Jalankan Bot
+Untuk menjalankan script, ketik perintah berikut di CMD lalu tekan **Enter**:
 ```bash
 python auto_fish.py
 ```
-> **Catatan:** Pastikan terminal/command prompt dijalankan dengan hak akses yang cukup (beberapa sistem memerlukan *Run as Administrator* agar `pynput` dapat mengirim input klik ke jendela Roblox).
+Jika muncul tulisan `=== BOT MEMANCING STEAL AN EGG SIAP ===`, berarti bot sudah siap digunakan!
+
+---
+
+## 💻 Panduan Cepat (Untuk yang Sudah Punya Python & Git)
+
+```bash
+# 1. Clone repositori
+git clone https://github.com/XHEVYR/auto-fish.git
+cd auto-fish
+
+# 2. (Opsional) Buat dan aktifkan Virtual Environment
+python -m venv venv
+venv\Scripts\activate
+
+# 3. Install dependensi
+pip install -r requirements.txt
+
+# 4. Jalankan script
+python auto_fish.py
+```
 
 ---
 
